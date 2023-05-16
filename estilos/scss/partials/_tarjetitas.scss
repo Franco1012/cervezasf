@@ -1,0 +1,63 @@
+.backgroundColor__productos {
+  background-color: $color-background;
+  .tarjetitas {
+    width: 80vw;
+    margin: auto;
+    padding: 2rem;
+    gap: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+
+    .tarjetita {
+      width: 18.5em;
+      height: auto;
+      justify-self: center;
+      display: flex;
+      flex-direction: column;
+
+      &__image {
+        width: 100%;
+        border-radius: 10px 10px 0 0;
+        transition: transform 0.5s;
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+
+      &__info {
+        padding: 1rem;
+        background-color: $color-secundario;
+        @include flex(column);
+        flex: 1;
+
+        &__titulo {
+          font-weight: 600;
+          color: rgb(39, 36, 36);
+        }
+
+        &__parrafo {
+          text-align: center;
+          font-weight: 300;
+          display: flex1;
+          flex: 1;
+          @include parrafo($color-parrafo);
+        }
+
+        &__masInfo {
+          padding: 1rem;
+          background-color: $color-principal;
+          color: $color-parrafo;
+          text-decoration: none;
+          border-radius: 5px;
+          transition: 1s;
+          &:hover {
+            transform: rotate(360deg);
+            background-color: $color-parrafo;
+            color: $color-secundario;
+          }
+        }
+      }
+    }
+  }
+}

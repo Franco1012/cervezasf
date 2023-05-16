@@ -1,0 +1,22 @@
+$color-principal: rgb(159, 172, 178);
+$color-secundario: rgb(68, 94, 147);
+$color-background: rgb(233, 227, 230);
+$color-parrafo: rgba(255, 255, 255, 0.905);
+
+@mixin flex($direction) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin titulo-principal($color) {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: $color;
+}
+@mixin parrafo($color) {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: $color;
+}

@@ -1,0 +1,139 @@
+/*media query header*/
+@media (max-width: 991px) {
+  .nav {
+    .logo {
+      @include flex(column);
+      &__texto{
+        padding-top: 0;
+      }
+    }
+  }
+  .menu__item:hover.menu__item:hover {
+    transform: none;
+    box-shadow: none;
+  }
+}
+
+/*media query index*/
+
+@media (max-width: 991px) {
+  .hero {
+    .hero__texto {
+      &__tituloPrincipal {
+        font-size: 2rem;
+        font-weight: 600;
+      }
+
+      &texto__parrafo {
+        font-size: 1.8rem;
+        font-weight: 400;
+      }
+    }
+  }
+}
+
+@media (max-width: 539px) {
+  .hero {
+    .hero__texto {
+      &tituloPrincipal {
+        font-size: 1rem;
+        font-weight: 600;
+      }
+
+      &__parrafo {
+        font-size: 1rem;
+        font-weight: 400;
+      }
+    }
+  }
+}
+
+/*media query pagina fabrica*/
+@media (max-width: 767px) {
+  .video {
+    height: 387px;
+  }
+}
+
+/*media query carrusel*/
+@media (max-width: 767px) {
+  .carrusel {
+    margin-top: 1rem;
+  }
+}
+
+/*media query pagina productos*/
+@media (max-width: 972px) {
+  .backgroundColor__productos {
+    .tarjetitas {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+}
+
+@media (max-width: 650px) {
+  .backgroundColor__productos {
+    .tarjetitas {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+
+/*media query pagina nosotros*/
+@media (max-width: 767px) {
+  .backgroundColor__nosotros {
+    .nosotros {
+      min-height: 90vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+
+      &__image1 {
+        order: 1;
+      }
+
+      &__texto2 {
+        order: 3;
+      }
+    }
+  }
+}
+
+/*media query pagina contacto*/
+@media (max-width: 767px) {
+  .backgroundColor__contacto {
+    .contacto {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      &__mapa {
+        width: 100%;
+        height: 670.717px;
+      }
+    }
+  }
+}
+
+/*media query footer*/
+@media (max-width: 767px) {
+  .footer {
+    &__copyright {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &__icons {
+      margin-top: 1rem;
+      justify-content: center;
+      gap: 1rem;
+    }
+  }
+}

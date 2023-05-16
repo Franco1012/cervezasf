@@ -1,0 +1,27 @@
+.backgroundColor__fabrica {
+  background-color: $color-background;
+
+  .fabrica {
+    padding-top: 2rem;
+    min-height: 90vh;
+
+    &__info {
+      @include flex(column);
+      background-color: $color-secundario;
+      border-radius: 5px;
+      margin-top: 1rem;
+      margin-bottom: 2rem;
+
+      &__tituloPrincipal {
+        @include titulo-principal($color-principal);
+        padding-top: 1rem;
+      }
+
+      &__parrafo {
+        @include parrafo($color-parrafo);
+        text-align: center;
+        padding: 1rem;
+      }
+    }
+  }
+}

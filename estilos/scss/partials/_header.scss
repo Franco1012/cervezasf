@@ -1,0 +1,72 @@
+.nav {
+  background-color: $color-principal;
+  min-height: 10vh;
+  padding: 1rem;
+  .animacion__logo {
+    -webkit-animation: slide-in-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+      both;
+    animation: slide-in-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  }
+
+  .logo {
+    @include flex(row);
+
+    &__image {
+      width: 3rem;
+    }
+
+    &__texto {
+      padding-top: 0.6rem;
+      padding-left: 0.3rem;
+      font-weight: 600;
+      font-size: 1rem;
+
+      &:active {
+        color: rgb(175, 203, 255);
+      }
+    }
+  }
+
+  .menu__item {
+    &:hover {
+      transform: scale(0.95);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+    a:active {
+      color: rgb(175, 203, 255);
+    }
+  }
+
+  .search__button {
+    color: black;
+    border: solid 1px black;
+    &:hover {
+      background-color: $color-secundario;
+    }
+  }
+}
+
+@-webkit-keyframes slide-in-top {
+  0% {
+    -webkit-transform: translateY(-1000px);
+    transform: translateY(-1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-top {
+  0% {
+    -webkit-transform: translateY(-1000px);
+    transform: translateY(-1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

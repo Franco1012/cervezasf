@@ -1,0 +1,97 @@
+.backgroundColor__contacto {
+  background-color: $color-background;
+  .contacto {
+    padding-top: 1rem;
+    min-height: 90vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.2fr 1fr 0.2fr;
+    gap: 1rem;
+    .animacion__contactanos {
+      -webkit-animation: vibrate-1 0.3s linear infinite both;
+      animation: vibrate-1 0.3s linear infinite both;
+      &:hover {
+        animation-play-state: paused;
+      }
+    }
+
+    &__tituloPrincipal {
+      grid-column: 1/5;
+      grid-row: 1/1;
+      @include flex(row);
+      @include titulo-principal($color-secundario);
+      transform: skew(0deg, -5deg);
+    }
+
+    &__mapa {
+      grid-column: 3/5;
+      grid-row: 2/2;
+      border: solid 1px rgb(87, 115, 122);
+    }
+
+    &__info {
+      grid-column: 1/5;
+      @include flex(column);
+      @include parrafo($color-secundario);
+
+      &__telefono {
+        @include flex(column);
+        gap: 1rem;
+        list-style: none;
+      }
+    }
+  }
+}
+
+@-webkit-keyframes vibrate-1 {
+  0% {
+    -webkit-transform: translate(0);
+    transform: translate(0);
+  }
+  20% {
+    -webkit-transform: translate(-2px, 2px);
+    transform: translate(-2px, 2px);
+  }
+  40% {
+    -webkit-transform: translate(-2px, -2px);
+    transform: translate(-2px, -2px);
+  }
+  60% {
+    -webkit-transform: translate(2px, 2px);
+    transform: translate(2px, 2px);
+  }
+  80% {
+    -webkit-transform: translate(2px, -2px);
+    transform: translate(2px, -2px);
+  }
+  100% {
+    -webkit-transform: translate(0);
+    transform: translate(0);
+  }
+}
+@keyframes vibrate-1 {
+  0% {
+    -webkit-transform: translate(0);
+    transform: translate(0);
+  }
+  20% {
+    -webkit-transform: translate(-2px, 2px);
+    transform: translate(-2px, 2px);
+  }
+  40% {
+    -webkit-transform: translate(-2px, -2px);
+    transform: translate(-2px, -2px);
+  }
+  60% {
+    -webkit-transform: translate(2px, 2px);
+    transform: translate(2px, 2px);
+  }
+  80% {
+    -webkit-transform: translate(2px, -2px);
+    transform: translate(2px, -2px);
+  }
+  100% {
+    -webkit-transform: translate(0);
+    transform: translate(0);
+  }
+}

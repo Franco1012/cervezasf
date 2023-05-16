@@ -1,0 +1,36 @@
+%iconos {
+  color: antiquewhite;
+  padding: 0.2rem;
+  border-radius: 5px;
+}
+.footer {
+  background-color: $color-principal;
+  &__copyright {
+    @include parrafo($color-parrafo);
+  }
+  &__icons {
+    display: flex;
+    justify-content: space-between;
+
+    a:hover {
+      transform: scale(1.1);
+    }
+
+    &--color {
+      @extend %iconos;
+    }
+  }
+}
+
+$redes-sociales: (
+  facebook: rgb(59, 40, 204),
+  instagram: rgb(238, 108, 77),
+  whatsapp: rgb(8, 76, 97),
+);
+
+@each $red-social, $color-red in $redes-sociales {
+  .bi-#{$red-social} {
+    background-color: $color-red;
+    border: solid 2px $color-red;
+  }
+}
