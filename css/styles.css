@@ -58,7 +58,7 @@
     opacity: 1; } }
 
 .hero {
-  background-image: url(../../../img/hero6.jpg);
+  background-image: url(./img/hero6.jpg);
   height: 90vh;
   background-size: cover;
   background-position: center;
