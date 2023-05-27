@@ -3,7 +3,7 @@
   .nav {
     .logo {
       @include flex(column);
-
+      padding-top: 9px;
       &__texto {
         padding-top: 0;
       }
