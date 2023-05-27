@@ -1,5 +1,6 @@
 .backgroundColor__contacto {
   background-color: $color-background;
+
   .contacto {
     padding-top: 1rem;
     min-height: 90vh;
@@ -7,9 +8,11 @@
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 0.2fr 1fr 0.2fr;
     gap: 1rem;
+
     .animacion__contactanos {
       -webkit-animation: vibrate-1 0.3s linear infinite both;
       animation: vibrate-1 0.3s linear infinite both;
+
       &:hover {
         animation-play-state: paused;
       }
@@ -48,48 +51,59 @@
     -webkit-transform: translate(0);
     transform: translate(0);
   }
+
   20% {
     -webkit-transform: translate(-2px, 2px);
     transform: translate(-2px, 2px);
   }
+
   40% {
     -webkit-transform: translate(-2px, -2px);
     transform: translate(-2px, -2px);
   }
+
   60% {
     -webkit-transform: translate(2px, 2px);
     transform: translate(2px, 2px);
   }
+
   80% {
     -webkit-transform: translate(2px, -2px);
     transform: translate(2px, -2px);
   }
+
   100% {
     -webkit-transform: translate(0);
     transform: translate(0);
   }
 }
+
 @keyframes vibrate-1 {
   0% {
     -webkit-transform: translate(0);
     transform: translate(0);
   }
+
   20% {
     -webkit-transform: translate(-2px, 2px);
     transform: translate(-2px, 2px);
   }
+
   40% {
     -webkit-transform: translate(-2px, -2px);
     transform: translate(-2px, -2px);
   }
+
   60% {
     -webkit-transform: translate(2px, 2px);
     transform: translate(2px, 2px);
   }
+
   80% {
     -webkit-transform: translate(2px, -2px);
     transform: translate(2px, -2px);
   }
+
   100% {
     -webkit-transform: translate(0);
     transform: translate(0);

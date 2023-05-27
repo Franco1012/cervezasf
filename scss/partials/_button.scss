@@ -1,12 +1,11 @@
-.boton{
-    background-color:$color-secundario;
-    color: $color-parrafo;
-    font-size: 1.1rem;
-    font-weight: 400;
-    transition: 0.5s;
-    &:active{
-        transform: scale(0.8);
+.boton {
+  background-color: $color-secundario;
+  color: $color-parrafo;
+  font-size: 1.1rem;
+  font-weight: 400;
+  transition: 0.5s;
 
-    }
-
+  &:active {
+    transform: scale(0.8);
+  }
 }

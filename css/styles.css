@@ -26,18 +26,24 @@
 }
 
 .nav .logo__image {
-  width: 3rem;
+  width: 2rem;
+  transition: transform 0.5s;
+}
+
+.nav .logo__image:active {
+  transform: scale(0.9);
 }
 
 .nav .logo__texto {
-  padding-top: 0.6rem;
+  padding-top: 1.2rem;
   padding-left: 0.3rem;
   font-weight: 600;
   font-size: 1rem;
+  transition: transform 0.5s;
 }
 
 .nav .logo__texto:active {
-  color: #afcbff;
+  transform: scale(0.9);
 }
 
 .nav .menu__item:hover {
@@ -46,16 +52,32 @@
 }
 
 .nav .menu__item a:active {
-  color: #afcbff;
+  color: rgba(255, 255, 255, 0.905);
 }
 
-.nav .search__button {
-  color: black;
-  border: solid 1px black;
+.nav .animation__item1 {
+  -webkit-animation: slide-in-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.2s both;
+  animation: slide-in-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.2s both;
 }
 
-.nav .search__button:hover {
-  background-color: #445e93;
+.nav .animation__item2 {
+  -webkit-animation: slide-in-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.4s both;
+  animation: slide-in-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.4s both;
+}
+
+.nav .animation__item3 {
+  -webkit-animation: slide-in-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.6s both;
+  animation: slide-in-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.6s both;
+}
+
+.nav .animation__item4 {
+  -webkit-animation: slide-in-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.8s both;
+  animation: slide-in-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.8s both;
+}
+
+.nav .animation__item5 {
+  -webkit-animation: slide-in-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1s both;
+  animation: slide-in-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1s both;
 }
 
 @-webkit-keyframes slide-in-top {
@@ -108,6 +130,7 @@
   justify-content: center;
   align-items: center;
   background-color: rgba(55, 45, 44, 0.8);
+  border-radius: 5px;
 }
 
 .hero .hero__texto__tituloPrincipal {
@@ -159,11 +182,24 @@
 .backgroundColor__productos .tarjetitas {
   width: 80vw;
   margin: auto;
-  padding: 2rem;
+  padding: 1rem;
   gap: 1rem;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.2fr 1fr 1fr;
   justify-content: center;
+}
+
+.backgroundColor__productos .tarjetitas__variedades {
+  grid-column: 1/4;
+  grid-row: 1/1;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #445e93;
 }
 
 .backgroundColor__productos .tarjetitas .tarjetita {
@@ -195,6 +231,7 @@
 }
 
 .backgroundColor__productos .tarjetitas .tarjetita__info__titulo {
+  font-size: 1.2rem;
   font-weight: 600;
   color: #272424;
 }
@@ -219,7 +256,6 @@
 }
 
 .backgroundColor__productos .tarjetitas .tarjetita__info__masInfo:hover {
-  transform: rotate(360deg);
   background-color: rgba(255, 255, 255, 0.905);
   color: #445e93;
 }
@@ -232,27 +268,39 @@
   min-height: 90vh;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(4, 1fr);
+  grid-template-rows: 0.5fr 1fr 1fr 1fr 1fr;
   gap: 1rem;
+}
+
+.backgroundColor__nosotros .nosotros__conocenos {
+  grid-column: 1/5;
+  grid-row: 1/1;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #445e93;
 }
 
 .backgroundColor__nosotros .nosotros__image1 {
   grid-column: 3/5;
-  grid-row: 1/3;
+  grid-row: 2/4;
   display: flex;
   align-items: center;
 }
 
 .backgroundColor__nosotros .nosotros__image2 {
   grid-column: 1/3;
-  grid-row: 3/5;
+  grid-row: 4/6;
   display: flex;
   align-items: center;
 }
 
 .backgroundColor__nosotros .nosotros__texto1 {
   grid-column: 1/3;
-  grid-row: 1/3;
+  grid-row: 2/4;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -263,7 +311,7 @@
 
 .backgroundColor__nosotros .nosotros__texto2 {
   grid-column: 3/5;
-  grid-row: 3/5;
+  grid-row: 4/6;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -335,7 +383,7 @@
 }
 
 .backgroundColor__fabrica .fabrica {
-  padding-top: 2rem;
+  padding: 2rem;
   min-height: 90vh;
 }
 
@@ -346,8 +394,7 @@
   align-items: center;
   background-color: #445e93;
   border-radius: 5px;
-  margin-top: 1rem;
-  margin-bottom: 2rem;
+  margin-top: 2rem;
 }
 
 .backgroundColor__fabrica .fabrica__info__tituloPrincipal {
@@ -604,14 +651,15 @@
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  padding: 1.5rem;
+  padding: 2rem;
 }
 
 .form .formulario__ingresar {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: 0.5rem;
-  margin-right: 1rem;
 }
 
 .form .formulario__legend {
@@ -657,12 +705,12 @@
   gap: 1rem;
 }
 
-.form .formulario__encuesta__comentario {
+.form .formulario__comentario {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 0.5rem;
+  gap: 1rem;
 }
 
 .form .formulario__buttoms {
@@ -674,7 +722,7 @@
   gap: 3rem;
 }
 
-.footer__icons--color {
+.footer__icons__link--color {
   color: antiquewhite;
   padding: 0.2rem;
   border-radius: 5px;
@@ -695,7 +743,11 @@
   justify-content: space-between;
 }
 
-.footer__icons a:hover {
+.footer__icons__link {
+  transition: transform 0.2s;
+}
+
+.footer__icons__link:hover {
   transform: scale(1.1);
 }
 
@@ -731,9 +783,18 @@
     transform: none;
     box-shadow: none;
   }
+
+  .animation__item1,
+  .animation__item2,
+  .animation__item3,
+  .animation__item4,
+  .animation__item5 {
+    -webkit-animation: none !important;
+    animation: none !important;
+  }
 }
 
-/*media query index*/
+/*media query hero*/
 @media (max-width: 991px) {
   .hero .hero__texto__tituloPrincipal {
     font-size: 2rem;
@@ -748,27 +809,37 @@
 
 @media (max-width: 539px) {
   .hero .hero__textotituloPrincipal {
-    font-size: 1rem;
-    font-weight: 600;
+    font-size: 1.5rem;
   }
 
   .hero .hero__texto__parrafo {
-    font-size: 1rem;
-    font-weight: 400;
+    font-size: 1.3rem;
   }
 }
 
 /*media query pagina fabrica*/
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  .backgroundColor__fabrica .fabrica__info {
+    height: 60vh;
+  }
+}
+
 @media (max-width: 767px) {
   .video {
     height: 387px;
   }
 }
 
+@media (max-width: 500px) {
+  .video {
+    height: 237.75px;
+  }
+}
+
 /*media query carrusel*/
 @media (max-width: 767px) {
   .carrusel {
-    margin-top: 1rem;
+    margin-top: 1.5rem;
   }
 }
 
@@ -776,6 +847,11 @@
 @media (max-width: 972px) {
   .backgroundColor__productos .tarjetitas {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .backgroundColor__productos .tarjetitas__variedades {
+    grid-column: 1/3;
+    grid-row: 1/1;
   }
 }
 
@@ -827,6 +903,7 @@
 @media (max-width: 767px) {
   .footer__copyright {
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
   }

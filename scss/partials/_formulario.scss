@@ -12,13 +12,11 @@
   .formulario {
     @include flex(column);
     gap: 1rem;
-    padding: 1.5rem;
+    padding: 2rem;
 
     &__ingresar {
-      display: flex;
-      flex-direction: column;
+      @include flex(column);
       gap: 0.5rem;
-      margin-right: 1rem;
     }
 
     &__legend {
@@ -42,21 +40,23 @@
           gap: 1.5rem;
         }
       }
+
       &__options {
         @include flex(column);
         gap: 1rem;
       }
+    }
 
-      &__comentario {
-        @include flex(column);
-        gap: 0.5rem;
-      }
+    &__comentario {
+      @include flex(column);
+      gap: 1rem;
     }
 
     &__buttoms {
       margin-top: 1rem;
       @include flex(row);
       gap: 3rem;
+
       .buttom {
         @extend .boton;
       }

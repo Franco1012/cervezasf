@@ -21,39 +21,31 @@
         <a class="navbar-brand" href="../index.html">
           <div class="logo animacion__logo">
             <img src="../img/logo-removebg-preview.png" alt="logo" class="logo__image" />
-            <h3 class="logo__texto">CervezaSF</h3>
+            <p class="logo__texto">CervezaSF</p>
           </div>
         </a>
-
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item menu__item">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item menu__item animation__item1">
               <a class="nav-link" href="../index.html">Inicio</a>
             </li>
-
-            <li class="nav-item menu__item">
+            <li class="nav-item menu__item animation__item2">
               <a class="nav-link" href="./nosotros.html">Nosotros</a>
             </li>
-            <li class="nav-item menu__item">
+            <li class="nav-item menu__item animation__item3">
               <a class="nav-link" href="./fabrica.html">Fabrica</a>
             </li>
-            <li class="nav-item menu__item">
+            <li class="nav-item menu__item animation__item4">
               <a class="nav-link" href="./productos.html">Productos</a>
             </li>
-            <li class="nav-item menu__item">
+            <li class="nav-item menu__item animation__item5">
               <a class="nav-link active" aria-current="page" href="./contacto.html">Contacto</a>
             </li>
           </ul>
-          <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-            <button class="btn btn-outline-success search__button" type="submit">
-              Search
-            </button>
-          </form>
         </div>
       </div>
     </nav>
@@ -73,21 +65,18 @@
               </div>
               <div>Nombre</div>
             </div>
-
             <div class="formulario__ingresar">
               <div>
                 <input type="text" placeholder="Ingresar Apellido" required />
               </div>
               <div>Apellido</div>
             </div>
-
             <div class="formulario__ingresar">
               <div>
                 <input type="email" placeholder="Ingresar Email" required />
               </div>
               <div>Email</div>
             </div>
-
             <fieldset>
               <legend class="formulario__legend">Encuesta</legend>
               <div class="formulario__encuesta">
@@ -101,9 +90,8 @@
                     <input id="No" type="radio" name="novedades" value="No" /><label for="No">No</label>
                   </div>
                 </div>
-
                 <div class="formulario__encuesta__options">
-                  <div>Como conociste nuestros productos?</div>
+                  <div class="text-center">Como conociste nuestros productos?</div>
                   <select>
                     <option value="Google">Mediante Google</option>
                     <option value="Redes">a través de Redes Sociales</option>
@@ -114,29 +102,29 @@
                 </div>
               </div>
             </fieldset>
-
+            <div class="formulario__comentario">
+              <div>Comentario</div>
+              <textarea placeholder="Ingrese comentario" cols="auto" rows="5"></textarea>
+            </div>
             <div class="formulario__buttoms">
               <div>
                 <input class="buttom" type="submit" value="Enviar" />
               </div>
-
               <div>
                 <input class="buttom" type="reset" value="Borrar" />
               </div>
             </div>
           </div>
         </form>
-
         <div class="contacto__mapa">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d33140.50895980018!2d-64.57564565293043!3d-31.979898788410335!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95d2b05df32fdf21%3A0xca30b7769d4566d3!2sX5194%20Villa%20Gral.%20Belgrano%2C%20C%C3%B3rdoba!5e0!3m2!1ses!2sar!4v1682391846260!5m2!1ses!2sar"
             width="100%" height="100%" allowfullscreen="" loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
-
         <div class="contacto__info">
           <ul class="contacto__info__telefono">
-            <li>Telefono: 351113456</li>
+            <li>Teléfono: 3512134584</li>
             <li>Dirección: Villa Gral. Belgrano</li>
           </ul>
         </div>
@@ -152,9 +140,12 @@
         </div>
         <div class="col-md-6">
           <div class="footer__icons">
-            <a href="https://es-la.facebook.com/"><i class="bi bi-facebook footer__icons--color"></i></a>
-            <a href="https://www.instagram.com/"><i class="bi bi-instagram footer__icons--color"></i></a>
-            <a href="https://www.whatsapp.com/?lang=es"><i class="bi bi-whatsapp footer__icons--color"></i></a>
+            <a class="footer__icons__link" href="https://es-la.facebook.com/"><i
+                class="bi bi-facebook footer__icons__link--color"></i></a>
+            <a class="footer__icons__link" href="https://www.instagram.com/"><i
+                class="bi bi-instagram footer__icons__link--color"></i></a>
+            <a class="footer__icons__link" href="https://wa.me/3512134584"><i
+                class="bi bi-whatsapp footer__icons__link--color"></i></a>
           </div>
         </div>
       </div>

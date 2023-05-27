@@ -3,21 +3,28 @@
   padding: 0.2rem;
   border-radius: 5px;
 }
+
 .footer {
   background-color: $color-principal;
+
   &__copyright {
     @include parrafo($color-parrafo);
   }
+
   &__icons {
     display: flex;
     justify-content: space-between;
 
-    a:hover {
-      transform: scale(1.1);
-    }
+    &__link {
+      transition: transform 0.2s;
 
-    &--color {
-      @extend %iconos;
+      &:hover {
+        transform: scale(1.1);
+      }
+
+      &--color {
+        @extend %iconos;
+      }
     }
   }
 }
